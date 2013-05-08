@@ -20,10 +20,8 @@
   "license": "Apache",
   "readmeFilename": "README.md",
   "gitHead": "6060521f59923bbe54a16a3eb96e63108e8528ab",
-  "devDependencies": {
-    "express": "~3.2.3"
-  },
   "dependencies": {
+    "express": "~3.2.3",
     "ejs": "~0.8.3"
   }
 }
