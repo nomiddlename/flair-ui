@@ -58,9 +58,14 @@
         }
         if ((response.basePath != null) && jQuery.trim(response.basePath).length > 0) {
           _this.basePath = response.basePath;
-          if (_this.basePath.match(/^HTTP/i) == null) {
-            _this.fail("discoveryUrl basePath must be a URL.");
-          }
+/**
+ * removing this restriction
+ * it means we can serve docs from same url as host
+ * without CORS
+ * if (_this.basePath.match(/^HTTP/i) == null) {
+ * _this.fail("discoveryUrl basePath must be a URL.");
+ * }
+ */
           _this.basePath = _this.basePath.replace(/\/$/, '');
         } else {
           _this.basePath = _this.discoveryUrl.substring(0, _this.discoveryUrl.lastIndexOf('/'));
