@@ -60,7 +60,7 @@
           _this.basePath = response.basePath;
 /**
  * removing this restriction
- * it means we can serve docs from same url as host
+ * it means we can serve docs from same url as api host
  * without CORS
  * if (_this.basePath.match(/^HTTP/i) == null) {
  * _this.fail("discoveryUrl basePath must be a URL.");
