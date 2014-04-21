@@ -1,7 +1,6 @@
 var express = require('express')
 , defaults = {
   supportHeaderParams: false,
-  supportedSubmitMethods: [ 'get', 'post', 'put' ],
   apiKey: 'special-key' 
 };
 
