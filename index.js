@@ -1,7 +1,6 @@
 var express = require('express')
 , defaults = {
   supportHeaderParams: false,
-  supportedSubmitMethods: [ 'get', 'post', 'put' ],
   apiKey: 'special-key' 
 };
 
@@ -15,9 +14,9 @@ module.exports = function(swaggerUrl, options) {
 
   app.set('views', __dirname);
   app.engine('ejs', require('ejs').__express);
-  app.use(express.static(__dirname + '/static'));
-  app.get('/', render);
   app.get('/index.html', render);
+  app.use(express.static(__dirname + '/node_modules/swagger-ui/dist'));
+  app.get('/', render);
 
   return app;
 };

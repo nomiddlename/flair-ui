@@ -14,7 +14,8 @@ Usage
         //mounts the html docs and api explorer on /docs
         //(needs to know the location of swagger json - could be passed absolute or relative url)
         app.get("/docs", flairui("/api-doc"));
-        
+        app.use(express.static('node_modules/flair-ui/node_modules/swagger-ui/dist'));
+
 Licence
 -------
 [Apache Licence 2.0](https://www.apache.org/licenses/LICENSE-2.0) - same as swagger-ui.
