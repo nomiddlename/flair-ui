@@ -15,9 +15,9 @@ module.exports = function(swaggerUrl, options) {
 
   app.set('views', __dirname);
   app.engine('ejs', require('ejs').__express);
+  app.get('/index.html', render);
   app.use(express.static(__dirname + '/node_modules/swagger-ui/dist'));
   app.get('/', render);
-  app.get('/index.html', render);
 
   return app;
 };
